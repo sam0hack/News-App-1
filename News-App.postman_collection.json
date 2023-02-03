@@ -1,0 +1,504 @@
+{
+	"info": {
+		"_postman_id": "53c2846d-bd38-4ed3-b32a-94ed5b34a167",
+		"name": "News-App",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "1650324"
+	},
+	"item": [
+		{
+			"name": "Register",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "sam",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "sam.nyx@live.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "sam@@@sam123",
+							"type": "text"
+						},
+						{
+							"key": "password_confirmation",
+							"value": "sam@@@sam123",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{url}}/api/register",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "sam.nyx@live.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "sam@@@sam123",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{url}}/api/login",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add User Prefence",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "60|034ixLQJ5oSOEJrFGcAY8zHfQqeIj6XUy2KO3uP0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "meta",
+							"value": "source",
+							"type": "text"
+						},
+						{
+							"key": "value",
+							"value": "",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{url}}/api/add-user-preference",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"add-user-preference"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Logout",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "5|9G17j8ViNKpEXfc3mAVa8QVjo6ClITu06KdywHXI",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "{{url}}/api/logout",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"logout"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Change Password",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "81|JG5PEDtd2SlBB8pYJUvExhylNuLdZIuk7Bsduxz6",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "password",
+							"value": "samsam1233",
+							"type": "text"
+						},
+						{
+							"key": "password_confirmation",
+							"value": "samsam123",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{url}}/api/change-password",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"change-password"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get User Prefence",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "71|PY70q9y7WftpxWytbS3wTtKM2abVDlBugFnLgDuC",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "meta",
+							"value": "feed",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{url}}/api/get-user-preference",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"get-user-preference"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get User ALL Prefences",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "71|PY70q9y7WftpxWytbS3wTtKM2abVDlBugFnLgDuC",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "{{url}}/api/get-user-preferences",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"get-user-preferences"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Sources",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "1|CYAV8m28dMbmQc7cajKDHIdjU6K8BXnjXgE60IHh",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{url}}/api/get-sources",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"get-sources"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get News Articles",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{url}}/api/get-articles?source=theGuardian",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"get-articles"
+					],
+					"query": [
+						{
+							"key": "source",
+							"value": "theGuardian"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Search articles",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{url}}/api/search?category=sports",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"search"
+					],
+					"query": [
+						{
+							"key": "keywords",
+							"value": " ",
+							"disabled": true
+						},
+						{
+							"key": "category",
+							"value": "sports"
+						},
+						{
+							"key": "source",
+							"value": "abc-news",
+							"disabled": true
+						},
+						{
+							"key": "from_date",
+							"value": "2013-02-02",
+							"disabled": true
+						},
+						{
+							"key": "to_date",
+							"value": "2013-02-08",
+							"disabled": true
+						},
+						{
+							"key": "author",
+							"value": "Steve Dent",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Top Headlines",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/api/get-top-headlines?source=newsOrg",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"get-top-headlines"
+					],
+					"query": [
+						{
+							"key": "source",
+							"value": "newsOrg"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Categories",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/api/get-categories",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"get-categories"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "url",
+			"value": "http://localhost:8080",
+			"type": "string"
+		}
+	]
+}
