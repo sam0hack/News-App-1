@@ -8,14 +8,14 @@ This app is build with Laravel and React and fetch news from new.org , new York 
 
 To get started, make sure you have [Docker installed](https://docs.docker.com/) on your system, and then clone this repository.
 
-Next, navigate in your terminal to the directory of this repo, and spin up the containers by running `docker-compose up -d --build app`.
+Next, navigate in your terminal to the root directory of this repo, and spin up the containers by running `docker-compose up -d --build app`.
 
 
 You can change the port and other configration inside **docker-compose.yml** file.
 
 **Please rename the `.env.example` to `.env` and set the API keys for news-api's**
 
-in the project root Run `cp src/.env.example src/.env`
+inside the project root directory Run `cp src/.env.example src/.env`
 
 
 `NYTIMES_KEY=`
@@ -72,3 +72,8 @@ Add scroll Pagination with news-api's.
 Add singleton instance of redis cache to controll the cache and make api request faster.
 
 Make more attractive UI.
+
+Make more reusable react component. 
+
+Code Clean up.
+
