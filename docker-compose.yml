@@ -65,7 +65,7 @@ services:
     environment:
       - NODE_ENV=development
     ports:
-      - "8181:3000"
+      - "3000:3000"
 
   redis:
     image: redis:alpine
@@ -95,7 +95,7 @@ services:
     volumes:
       - ./src:/var/www/html
     ports:
-      - "3000:3000"
+      - "3010:3000"
       - "3001:3001"
       - "5173:5173"
     working_dir: /var/www/html
