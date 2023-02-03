@@ -38,8 +38,6 @@ Import `News-App.postman_collection.json` into your postman.
  2. New York times - https://developer.nytimes.com/
  3. The Guardian - https://developer.nytimes.com/
 
-
-
  ****
 
 
@@ -54,10 +52,17 @@ Import `News-App.postman_collection.json` into your postman.
 - [x] For You - custom feed
 - [x] create preference for custom feed
 - [x] latest news
+- [x] Implemented 3 different news API
 - [x] Change Password
 - [x] search - keyword
 - [x] search filter (source,category,from-date,to-date,author)
 ```
+
+## Why Two Projects
+
+This can be done with laravel + react in one project or better with laravel + react + Inertia.js.
+The Separation can allow us to deploy on different servers Also it was in the Project requirement/guidelines
+
 
 ## Todo
 Add docker-compose.prod.yml and  docker-compose.dev.yml So it will easier to test develop and deploy on prod server.
