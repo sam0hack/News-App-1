@@ -17,10 +17,10 @@ You can change the port and other configration inside **docker-compose.yml** fil
 
 **Please rename the `.env.example` to `.env` and set the API keys for news-api's**
 
-*NYTIMES_KEY=
-NYTIMES_SECRET=
-GUARDIAN_KEY=
-NEWSORG_KEY=*
+`NYTIMES_KEY=`
+`NYTIMES_SECRET=`
+`GUARDIAN_KEY=`
+`NEWSORG_KEY=`
 
 Run `./docker.sh` to install the dependencies and migrations.
 
