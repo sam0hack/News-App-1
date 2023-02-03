@@ -65,7 +65,7 @@ services:
     environment:
       - NODE_ENV=development
     ports:
-      - "8181:8181"
+      - "8181:3000"
 
   redis:
     image: redis:alpine
