@@ -36,19 +36,6 @@ Import `News-App.postman_collection.json` into your postman.
  3. The Guardian - https://developer.nytimes.com/
 
 
-## Containers
-This docker stack has 4 containers
-
-| Container | Service |
-|--|--|
-| `Backend_C` | Laravel |
-| `FrontEnd_C` | React |
-| `mysql_C` | Mysql DB |
-| `redis_C` | Redis Cache |
-
-The `docker-compose.yml` is using env variables and those variables are comming from **Laravel/.env** I'm using one env file so we don't have manage two or more env everytime we add remove something.
-
-
 
  ****
 
