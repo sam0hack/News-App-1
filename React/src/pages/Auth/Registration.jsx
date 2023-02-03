@@ -4,6 +4,7 @@ import equals from 'validator/es/lib/equals';
 import isEmpty from 'validator/es/lib/isEmpty';
 import axiosInstance from '../../apis/serverApi';
 import { REGISTRATION } from '../../apis/endPoints';
+import { useNavigate } from "react-router-dom";
 
 export const Registration = () => {
   const [email, setEmail] = useState('');
@@ -12,6 +13,7 @@ export const Registration = () => {
   const [passwordConfirmation, setPasswordConfirmation] = useState('');
   const [formMessage, setMessage] = useState({ message: '', class: '' });
   const alert = { success: 'alert alert-success', error: 'alert alert-danger' };
+  const navigate = useNavigate();
 
   const handleEmail = (e) => setEmail(e.target.value);
   const handlePassword = (e) => setPassword(e.target.value);
@@ -56,6 +58,11 @@ export const Registration = () => {
     }
 
     try {
+
+      setMessage({
+        message: 'Yay! You are successfully registered!',
+        class: alert.success
+      });
       await axiosInstance.post(REGISTRATION, {
         name: name,
         email: email,
@@ -65,10 +72,9 @@ export const Registration = () => {
 
       //@todo Check if response has same email ~ just to confirm everything went smoothly!
 
-      setMessage({
-        message: 'Yay! You are successfully registered!',
-        class: alert.success
-      });
+   
+
+      navigate("/login");
     } catch (err) {
       setMessage({ message: err.response.data.message, class: alert.error });
     }
