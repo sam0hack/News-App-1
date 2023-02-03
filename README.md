@@ -67,6 +67,8 @@ The Separation can allow us to deploy on different servers Also it was in the Pr
 ## Todo
 Add docker-compose.prod.yml and  docker-compose.dev.yml So it will easier to test develop and deploy on prod server.
 
+Add github-actions to run tests and builds
+
 Add scroll Pagination with news-api's.
 
 Add singleton instance of redis cache to controll the cache and make api request faster.
