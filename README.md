@@ -15,6 +15,9 @@ You can change the port and other configration inside **docker-compose.yml** fil
 
 **Please rename the `.env.example` to `.env` and set the API keys for news-api's**
 
+in the project root Run `cp src/.env.example src/.env`
+
+
 `NYTIMES_KEY=`
 `NYTIMES_SECRET=`
 `GUARDIAN_KEY=`
@@ -22,7 +25,7 @@ You can change the port and other configration inside **docker-compose.yml** fil
 
 Run `./docker.sh` to install the dependencies and migrations.
 
-
+Run `docker compose up` OR `docker compose up -d` to run in background.
 
 ## Postman API
 Import `News-App.postman_collection.json` into your postman.
