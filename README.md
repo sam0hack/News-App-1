@@ -23,6 +23,8 @@ in the project root Run `cp src/.env.example src/.env`
 `GUARDIAN_KEY=`
 `NEWSORG_KEY=`
 
+Run `chmod +x docker.sh`
+
 Run `./docker.sh` to install the dependencies and migrations.
 
 Run `docker compose up` OR `docker compose up -d` to run in background.
